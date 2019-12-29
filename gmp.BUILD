@@ -41,7 +41,8 @@ configure_make(
         # macro, leading to a syntax error.  Therefore we escape the "redacted"
         # token here manually.  Note that three levels of escaping are required
         # for the quotes: one for C++, one for sed, one for Bazel.
-        "sed -E -i .bak -e '/^#define __GMP_CFLAGS/s/\"redacted\"/\\\\\"redacted\\\\\"/g' gmp.h",
+        "sed '/^#define __GMP_CFLAGS/s/\"redacted\"/\\\\\"redacted\\\\\"/g' gmp.h > gmp.h.patched",
+        "mv gmp.h.patched gmp.h",
         "make install",
     ],
     static_libraries = [
