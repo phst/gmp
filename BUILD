@@ -16,10 +16,21 @@ load(":def.bzl", "copy_outputs")
 
 _OPTS = [
     "-Werror",
-    "-Weverything",
     "-pedantic-errors",
-    "--system-header-prefix=gmp",
-]
+] + select({
+    # Assume that on macOS the compiler is always Clang and that on Linux it can
+    # be GCC or Clang.
+    ":linux": [
+        "-Wall",
+        "-Wextra",
+        "-Wconversion",
+        "-Wno-sign-conversion",
+    ],
+    ":macos": [
+        "-Weverything",
+        "--system-header-prefix=gmp",
+    ],
+})
 
 _COPTS = _OPTS + ["-std=c11"]
 
@@ -78,4 +89,14 @@ copy_outputs(
         "libgmp.a",
         "libgmpxx.a",
     ],
+)
+
+config_setting(
+    name = "linux",
+    constraint_values = ["@platforms//os:linux"],
+)
+
+config_setting(
+    name = "macos",
+    constraint_values = ["@platforms//os:osx"],
 )

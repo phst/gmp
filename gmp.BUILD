@@ -17,7 +17,10 @@ load("@rules_foreign_cc//tools/build_defs:configure.bzl", "configure_make")
 configure_make(
     name = "gmp",
     configure_env_vars = select({
-        ":linux": {},
+        ":linux": {
+            # https://github.com/bazelbuild/rules_foreign_cc/issues/296
+            "CXX": "c++",
+        },
         ":macos": {
             # https://github.com/bazelbuild/rules_foreign_cc/issues/296
             "CXXFLAGS": "-lc++",
