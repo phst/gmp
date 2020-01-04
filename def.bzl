@@ -14,11 +14,11 @@
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
-def eu_phst_gmp_repos():
-    """Adds required dependencies for the eu_phst_gmp workspace."""
+def phst_gmp_repos():
+    """Adds required dependencies for the phst_gmp workspace."""
     http_archive(
         name = "gmp",
-        build_file = "@eu_phst_gmp//:gmp.BUILD",
+        build_file = "@phst_gmp//:gmp.BUILD",
         sha256 = "87b565e89a9a684fe4ebeeddb8399dce2599f9c9049854ca8c0dfbdea0e21912",
         strip_prefix = "gmp-6.1.2",
         urls = ["https://gmplib.org/download/gmp/gmp-6.1.2.tar.xz"],

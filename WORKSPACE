@@ -12,11 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-workspace(name = "eu_phst_gmp")
+workspace(name = "phst_gmp")
 
-load("//:def.bzl", "eu_phst_gmp_repos")
+load("//:def.bzl", "phst_gmp_repos")
 
-eu_phst_gmp_repos()
+phst_gmp_repos()
 
 load("@rules_foreign_cc//:workspace_definitions.bzl", "rules_foreign_cc_dependencies")
 
