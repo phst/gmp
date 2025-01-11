@@ -25,9 +25,9 @@ def phst_gmp_repos():
     )
     http_archive(
         name = "rules_foreign_cc",
-        sha256 = "2a06df9d6e8dd47a9a4ee97ac84d63f6a59e720df5d8c8db6b81b945a56f9768",
-        strip_prefix = "rules_foreign_cc-ed3db61a55c13da311d875460938c42ee8bbc2a5/",
-        urls = ["https://github.com/bazelbuild/rules_foreign_cc/archive/ed3db61a55c13da311d875460938c42ee8bbc2a5.zip"],
+        sha256 = "b2c04a55945b7640e68bffd43c74ba4d791922510f54d8d3bcc121a183990c32",
+        strip_prefix = "rules_foreign_cc-2dd6fe2aee33bf1a931ac18e5090c5476a229a02/",
+        urls = ["https://github.com/bazelbuild/rules_foreign_cc/archive/2dd6fe2aee33bf1a931ac18e5090c5476a229a02.zip"],
     )
 
 def _copy_outputs(ctx):
