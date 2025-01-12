@@ -1,27 +1,16 @@
 This repository contains [Bazel](https://bazel.build/) targets for
 version 6.3.0 of the [GNU Multiple Precision Arithmetic
-Library](https://gmplib.org/).  To use, add the following to your [WORKSPACE
-file](https://docs.bazel.build/versions/master/external.html):
+Library](https://gmplib.org/).  To use, add the following to your [MODULE.bazel
+file](https://bazel.build/external/overview#bzlmod):
 
 ```python
-http_archive(
-    name = "phst_gmp",
-    sha256 = "6b138c773afbc41ede0233f873d2508c6ea9dc71c2809ea56aa1f8c4b658c743",
-    strip_prefix = "gmp-b02eaae05766c7eae4046d3f65ab9cf277b5519f/",
-    urls = ["https://github.com/phst/gmp/archive/b02eaae05766c7eae4046d3f65ab9cf277b5519f.zip"],
+bazel_dep(name = "phst_gmp", version = "0")
+git_override(
+    module_name = "phst_gmp",
+    commit = "b02eaae05766c7eae4046d3f65ab9cf277b5519f",
+    remote = "https://github.com/phst/gmp.git",
 )
-
-load("@phst_gmp//:def.bzl", "phst_gmp_repos")
-
-phst_gmp_repos()
-
-load("@rules_foreign_cc//:workspace_definitions.bzl", "rules_foreign_cc_dependencies")
-
-rules_foreign_cc_dependencies(register_default_tools = False)
 ```
-
-The `register_default_tools = False` attribute isn’t necessary; you can also
-leave it out if you e. g. want to use CMake.
 
 Then you can use the
 [`cc_library`](https://docs.bazel.build/versions/master/be/c-cpp.html#cc_library)

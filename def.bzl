@@ -1,4 +1,4 @@
-# Copyright 2019 Google LLC
+# Copyright 2019, 2025 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -11,26 +11,6 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
-load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
-
-def phst_gmp_repos():
-    """Adds required dependencies for the phst_gmp workspace."""
-    http_archive(
-        name = "gmp",
-        build_file = "@phst_gmp//:gmp.BUILD",
-        sha256 = "a3c2b80201b89e68616f4ad30bc66aee4927c3ce50e33929ca819d5c43538898",
-        strip_prefix = "gmp-6.3.0/",
-        urls = [
-            "https://gmplib.org/download/gmp/gmp-6.3.0.tar.xz",  # 2023-07-29
-        ],
-    )
-    http_archive(
-        name = "rules_foreign_cc",
-        sha256 = "8e5605dc2d16a4229cb8fbe398514b10528553ed4f5f7737b663fdd92f48e1c2",
-        strip_prefix = "rules_foreign_cc-0.13.0",
-        url = "https://github.com/bazel-contrib/rules_foreign_cc/releases/download/0.13.0/rules_foreign_cc-0.13.0.tar.gz",
-    )
 
 def _copy_outputs(ctx):
     hdrs = _copy_headers(ctx)
