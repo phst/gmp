@@ -1,4 +1,4 @@
-# Copyright 2019 Google LLC
+# Copyright 2019, 2025 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -27,7 +27,10 @@ _OPTS = [
         "-Wno-sign-conversion",
     ],
     ":macos": [
-        "-Weverything",
+        "-Wall",
+        "-Wextra",
+        "-Wconversion",
+        "-Wno-sign-conversion",
         "--system-header-prefix=gmp",
     ],
 })
