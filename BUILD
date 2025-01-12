@@ -44,9 +44,9 @@ cc_library(
     srcs = ["libgmp.a"],
     hdrs = ["gmp.h"],
     copts = _COPTS,
-    # Using an empty include_prefix causes Bazel to emit -I instead of -iquote
+    # Using an include_prefix causes Bazel to emit -I instead of -iquote
     # options for the include directory, so that #include <gmp.h> works.
-    include_prefix = "",
+    include_prefix = ".",
     visibility = ["//visibility:public"],
 )
 
@@ -55,9 +55,9 @@ cc_library(
     srcs = ["libgmpxx.a"],
     hdrs = ["gmpxx.h"],
     copts = _CXXOPTS,
-    # Using an empty include_prefix causes Bazel to emit -I instead of -iquote
+    # Using an include_prefix causes Bazel to emit -I instead of -iquote
     # options for the include directory, so that #include <gmpxx.h> works.
-    include_prefix = "",
+    include_prefix = ".",
     visibility = ["//visibility:public"],
     deps = [":gmp"],
 )
