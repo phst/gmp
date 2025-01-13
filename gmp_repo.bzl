@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+"""Internal repository rules."""
+
 visibility("private")
 
 def _gmp_repo_impl(ctx):
