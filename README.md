@@ -7,7 +7,7 @@ file](https://bazel.build/external/overview#bzlmod):
 bazel_dep(name = "phst_gmp", version = "0")
 git_override(
     module_name = "phst_gmp",
-    commit = "b02eaae05766c7eae4046d3f65ab9cf277b5519f",
+    commit = "b0469369799af64bfd53df2ec61fee5ab0b1a0c0",
     remote = "https://github.com/phst/gmp.git",
 )
 ```
