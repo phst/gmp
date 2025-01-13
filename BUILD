@@ -64,6 +64,7 @@ cc_library(
 
 cc_test(
     name = "gmp_test",
+    size = "small",
     srcs = ["gmp_test.c"],
     copts = _COPTS,
     deps = [":gmp"],
@@ -71,6 +72,7 @@ cc_test(
 
 cc_test(
     name = "gmpxx_test",
+    size = "small",
     srcs = ["gmpxx_test.cc"],
     copts = _CXXOPTS,
     deps = [":gmpxx"],
