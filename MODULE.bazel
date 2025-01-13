@@ -13,7 +13,7 @@
 # limitations under the License.
 
 bazel_dep(name = "platforms", version = "0.0.11")
-bazel_dep(name = "rules_cc", version = "0.0.17")
+bazel_dep(name = "rules_cc", version = "0.1.0")
 bazel_dep(name = "rules_foreign_cc", version = "0.13.0")
 
 gmp_repo = use_repo_rule("//:gmp_repo.bzl", "gmp_repo")
