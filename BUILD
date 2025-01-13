@@ -20,13 +20,13 @@ _OPTS = [
 ] + select({
     # Assume that on macOS the compiler is always Clang and that on Linux it can
     # be GCC or Clang.
-    ":linux": [
+    "@platforms//os:linux": [
         "-Wall",
         "-Wextra",
         "-Wconversion",
         "-Wno-sign-conversion",
     ],
-    ":macos": [
+    "@platforms//os:osx": [
         "-Wall",
         "-Wextra",
         "-Wconversion",
@@ -92,14 +92,4 @@ copy_outputs(
         "libgmp.a",
         "libgmpxx.a",
     ],
-)
-
-config_setting(
-    name = "linux",
-    constraint_values = ["@platforms//os:linux"],
-)
-
-config_setting(
-    name = "macos",
-    constraint_values = ["@platforms//os:osx"],
 )
