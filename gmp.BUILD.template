@@ -23,18 +23,17 @@ configure_make(
         "--disable-shared",
         # The resulting libraries fail in weird ways without this option.
         "--with-pic",
-    ],
-    env = select({
-        "[linux]": {
+    ] + select({
+        "[linux]": [
             # https://github.com/bazelbuild/rules_foreign_cc/issues/296
-            "CXX": "c++",
-        },
-        "[macos]": {
+            "CXX=c++",
+        ],
+        "[macos]": [
             # https://github.com/bazelbuild/rules_foreign_cc/issues/296
-            "CXXFLAGS": "-lc++",
+            "CXXFLAGS=-lc++",
             # https://github.com/bazelbuild/rules_foreign_cc/issues/185
-            "AR": "",
-        },
+            "AR=",
+        ],
     }),
     lib_source = ":source",
     out_static_libs = [
