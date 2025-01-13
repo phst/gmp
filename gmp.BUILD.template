@@ -68,3 +68,7 @@ config_setting(
     name = "macos",
     constraint_values = ["[macos]"],
 )
+
+# Local Variables:
+# mode: bazel-build
+# End:
