@@ -32,7 +32,7 @@ def _gmp_repo_impl(ctx):
         {
             '"[configure.bzl]"': repr(str(Label("@rules_foreign_cc//foreign_cc:configure.bzl"))),
             '"[linux]"': repr(str(Label("@platforms//os:linux"))),
-            '"[macos]"': repr(str(Label("@platforms//os:osx"))),
+            '"[macos]"': repr(str(Label("@platforms//os:macos"))),
         },
         executable = False,
     )

@@ -26,7 +26,7 @@ _OPTS = [
         "-Wconversion",
         "-Wno-sign-conversion",
     ],
-    "@platforms//os:osx": [
+    "@platforms//os:macos": [
         "-Wall",
         "-Wextra",
         "-Wconversion",
