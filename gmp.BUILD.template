@@ -16,6 +16,14 @@ load("[configure.bzl]", "configure_make")
 
 configure_make(
     name = "gmp",
+    configure_options = [
+        "--enable-cxx",
+        # We don’t use the shared libraries, see the comment about copy_outputs
+        # in BUILD.
+        "--disable-shared",
+        # The resulting libraries fail in weird ways without this option.
+        "--with-pic",
+    ],
     env = select({
         "[linux]": {
             # https://github.com/bazelbuild/rules_foreign_cc/issues/296
@@ -28,15 +36,11 @@ configure_make(
             "AR": "",
         },
     }),
-    configure_options = [
-        "--enable-cxx",
-        # We don’t use the shared libraries, see the comment about copy_outputs
-        # in BUILD.
-        "--disable-shared",
-        # The resulting libraries fail in weird ways without this option.
-        "--with-pic",
-    ],
     lib_source = ":source",
+    out_static_libs = [
+        "libgmp.a",
+        "libgmpxx.a",
+    ],
     postfix_script = " && ".join([
         # Bazel defines the __TIME__ and __DATE__ macros as "redacted"
         # (including the quotes) on the command line.  configure copies the
@@ -47,10 +51,6 @@ configure_make(
         "sed '/^#define __GMP_CFLAGS/s/\"redacted\"/\\\\\"redacted\\\\\"/g' gmp.h > gmp.h.patched",
         "mv gmp.h.patched gmp.h",
     ]),
-    out_static_libs = [
-        "libgmp.a",
-        "libgmpxx.a",
-    ],
     visibility = ["//visibility:public"],
 )
 
