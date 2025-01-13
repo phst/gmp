@@ -47,4 +47,4 @@ jobs:
       - name: Run tests
         shell: bash
         run: |
-          bazelisk test //...
+          make check BAZEL=bazelisk
