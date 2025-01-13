@@ -1,5 +1,5 @@
 This repository contains [Bazel](https://bazel.build/) targets for
-version 6.1.2 of the [GNU Multiple Precision Arithmetic
+version 6.3.0 of the [GNU Multiple Precision Arithmetic
 Library](https://gmplib.org/).  To use, add the following to your [WORKSPACE
 file](https://docs.bazel.build/versions/master/external.html):
 

@@ -19,9 +19,11 @@ def phst_gmp_repos():
     http_archive(
         name = "gmp",
         build_file = "@phst_gmp//:gmp.BUILD",
-        sha256 = "87b565e89a9a684fe4ebeeddb8399dce2599f9c9049854ca8c0dfbdea0e21912",
-        strip_prefix = "gmp-6.1.2",
-        urls = ["https://gmplib.org/download/gmp/gmp-6.1.2.tar.xz"],
+        sha256 = "a3c2b80201b89e68616f4ad30bc66aee4927c3ce50e33929ca819d5c43538898",
+        strip_prefix = "gmp-6.3.0/",
+        urls = [
+            "https://gmplib.org/download/gmp/gmp-6.3.0.tar.xz",  # 2023-07-29
+        ],
     )
     http_archive(
         name = "rules_foreign_cc",
