@@ -14,4 +14,4 @@ all:
 check: all
 	$(BAZEL) test $(BAZELFLAGS) -- //...
 	$(ADDLICENSE) -check -- "$${PWD}"
-	$(BUILDIFIER) -mode=check -lint=warn -warnings=+native-cc -r -- "$${PWD}"
+	$(BUILDIFIER) -mode=check -lint=warn -warnings=all -r -- "$${PWD}"

@@ -40,6 +40,7 @@ def _gmp_repo_impl(ctx):
     )
 
 gmp_repo = repository_rule(
+    # @unsorted-dict-items
     attrs = {
         "version": attr.string(mandatory = True),
         "sha256": attr.string(mandatory = True),

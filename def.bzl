@@ -22,6 +22,7 @@ def _copy_outputs(ctx):
     return DefaultInfo(files = depset(hdrs + libs))
 
 copy_outputs = rule(
+    # @unsorted-dict-items
     attrs = {
         "src": attr.label(mandatory = True),
         "hdrs": attr.output_list(
