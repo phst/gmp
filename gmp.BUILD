@@ -12,11 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-load("@rules_foreign_cc//tools/build_defs:configure.bzl", "configure_make")
+load("@rules_foreign_cc//foreign_cc:configure.bzl", "configure_make")
 
 configure_make(
     name = "gmp",
-    configure_env_vars = select({
+    env = select({
         ":linux": {
             # https://github.com/bazelbuild/rules_foreign_cc/issues/296
             "CXX": "c++",
@@ -37,7 +37,7 @@ configure_make(
         "--with-pic",
     ],
     lib_source = ":source",
-    make_commands = [
+    postfix_script = " && ".join([
         # Bazel defines the __TIME__ and __DATE__ macros as "redacted"
         # (including the quotes) on the command line.  configure copies the
         # command line without escaping into the definition of the __GMP_CFLAGS
@@ -46,9 +46,8 @@ configure_make(
         # for the quotes: one for C++, one for sed, one for Bazel.
         "sed '/^#define __GMP_CFLAGS/s/\"redacted\"/\\\\\"redacted\\\\\"/g' gmp.h > gmp.h.patched",
         "mv gmp.h.patched gmp.h",
-        "make install",
-    ],
-    static_libraries = [
+    ]),
+    out_static_libs = [
         "libgmp.a",
         "libgmpxx.a",
     ],
