@@ -17,7 +17,11 @@ visibility("private")
 def _gmp_repo_impl(ctx):
     version = ctx.attr.version or fail("missing version")
     ctx.download_and_extract(
-        url = "https://gmplib.org/download/gmp/gmp-{}.tar.xz".format(version),
+        url = [
+            "https://ftpmirror.gnu.org/gnu/gmp/gmp-{}.tar.xz".format(version),
+            "https://ftp.gnu.org/gnu/gmp/gmp-{}.tar.xz".format(version),
+            "https://gmplib.org/download/gmp/gmp-{}.tar.xz".format(version),
+        ],
         sha256 = ctx.attr.sha256 or fail("missing integrity"),
         stripPrefix = "gmp-{}/".format(version),
     )
