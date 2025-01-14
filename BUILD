@@ -12,6 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+load("@buildifier//:rules.bzl", "buildifier_test")
 load("@rules_cc//cc:defs.bzl", "cc_library", "cc_test")
 load(":def.bzl", "copy_outputs")
 
@@ -95,4 +96,14 @@ copy_outputs(
         "libgmp.a",
         "libgmpxx.a",
     ],
+)
+
+buildifier_test(
+    name = "buildifier_test",
+    timeout = "short",
+    lint_mode = "warn",
+    lint_warnings = ["all"],
+    no_sandbox = True,
+    verbose = True,
+    workspace = "WORKSPACE",
 )
