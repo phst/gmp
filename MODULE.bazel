@@ -30,11 +30,12 @@ bazel_dep(
     dev_dependency = True,
     repo_name = "buildifier",
 )
-bazel_dep(name = "gazelle", version = "0.41.0", dev_dependency = True)
-
-go_deps = use_extension("@gazelle//:extensions.bzl", "go_deps", dev_dependency = True)
-go_deps.from_file(go_mod = "//:go.mod")
-use_repo(go_deps, addlicense = "com_github_google_addlicense")
+bazel_dep(name = "phst_license_test", version = "0", dev_dependency = True)
+git_override(
+    module_name = "phst_license_test",
+    commit = "9df4c6d0889aa11c2941180ece8ab97ef06d7f56",
+    remote = "https://github.com/phst/license_test.git",
+)
 
 bazel_dep(
     name = "phst_update_workspace_snippets",

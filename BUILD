@@ -13,6 +13,7 @@
 # limitations under the License.
 
 load("@buildifier//:rules.bzl", "buildifier_test")
+load("@phst_license_test//:def.bzl", "license_test")
 load("@rules_cc//cc:defs.bzl", "cc_library", "cc_test")
 load(":def.bzl", "copy_outputs")
 
@@ -106,4 +107,10 @@ buildifier_test(
     no_sandbox = True,
     verbose = True,
     workspace = "WORKSPACE",
+)
+
+license_test(
+    name = "license_test",
+    timeout = "short",
+    marker = "MODULE.bazel",
 )
