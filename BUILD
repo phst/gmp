@@ -12,8 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-load("@buildifier//:rules.bzl", "buildifier_test")
-load("@phst_license_test//:def.bzl", "license_test")
 load("@rules_cc//cc:defs.bzl", "cc_library", "cc_test")
 load(":def.bzl", "copy_outputs")
 
@@ -99,18 +97,11 @@ copy_outputs(
     ],
 )
 
-buildifier_test(
-    name = "buildifier_test",
-    timeout = "short",
-    lint_mode = "warn",
-    lint_warnings = ["all"],
-    no_sandbox = True,
-    verbose = True,
-    workspace = "WORKSPACE",
-)
-
-license_test(
-    name = "license_test",
-    timeout = "short",
-    marker = "MODULE.bazel",
+exports_files(
+    [
+        # keep sorted
+        "MODULE.bazel",
+        "WORKSPACE",
+    ],
+    visibility = ["//dev:__pkg__"],
 )
