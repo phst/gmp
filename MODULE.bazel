@@ -33,7 +33,7 @@ bazel_dep(
 bazel_dep(name = "phst_license_test", version = "0", dev_dependency = True)
 git_override(
     module_name = "phst_license_test",
-    commit = "6e5b86d0bdfcd1b81bdc58714424117ef2da960f",
+    commit = "8edd8c1ad9a165d2b717b97189fc2692e71488b6",
     remote = "https://github.com/phst/license_test.git",
 )
 
