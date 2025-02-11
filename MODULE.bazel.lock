@@ -66,6 +66,7 @@
     "https://bcr.bazel.build/modules/protobuf/27.0/MODULE.bazel": "7873b60be88844a0a1d8f80b9d5d20cfbd8495a689b8763e76c6372998d3f64c",
     "https://bcr.bazel.build/modules/protobuf/27.1/MODULE.bazel": "703a7b614728bb06647f965264967a8ef1c39e09e8f167b3ca0bb1fd80449c0d",
     "https://bcr.bazel.build/modules/protobuf/29.0-rc2/MODULE.bazel": "6241d35983510143049943fc0d57937937122baf1b287862f9dc8590fc4c37df",
+    "https://bcr.bazel.build/modules/protobuf/29.0-rc3/MODULE.bazel": "33c2dfa286578573afc55a7acaea3cada4122b9631007c594bf0729f41c8de92",
     "https://bcr.bazel.build/modules/protobuf/29.0/MODULE.bazel": "319dc8bf4c679ff87e71b1ccfb5a6e90a6dbc4693501d471f48662ac46d04e4e",
     "https://bcr.bazel.build/modules/protobuf/29.0/source.json": "b857f93c796750eef95f0d61ee378f3420d00ee1dd38627b27193aa482f4f981",
     "https://bcr.bazel.build/modules/protobuf/3.19.0/MODULE.bazel": "6b5fbb433f760a99a22b18b6850ed5784ef0e9928a72668b66e4d7ccd47db9b0",
@@ -89,8 +90,8 @@
     "https://bcr.bazel.build/modules/rules_cc/0.0.9/MODULE.bazel": "836e76439f354b89afe6a911a7adf59a6b2518fafb174483ad78a2a2fde7b1c5",
     "https://bcr.bazel.build/modules/rules_cc/0.1.1/MODULE.bazel": "2f0222a6f229f0bf44cd711dc13c858dad98c62d52bd51d8fc3a764a83125513",
     "https://bcr.bazel.build/modules/rules_cc/0.1.1/source.json": "d61627377bd7dd1da4652063e368d9366fc9a73920bfa396798ad92172cf645c",
-    "https://bcr.bazel.build/modules/rules_foreign_cc/0.13.0/MODULE.bazel": "5a9419cd02f6c2328eafd5234be8bef4d53357af80873392f5907f73f348c61b",
-    "https://bcr.bazel.build/modules/rules_foreign_cc/0.13.0/source.json": "e3495e083f232b3de375b77d2b0b01c18b6c2d1fc7337e451e8cd8e0c3e43dc6",
+    "https://bcr.bazel.build/modules/rules_foreign_cc/0.14.0/MODULE.bazel": "56fb9a239503bab4183d06ba6cabb01cd73aae296ab499085b9193624a8a66e2",
+    "https://bcr.bazel.build/modules/rules_foreign_cc/0.14.0/source.json": "64ccb6c4bff8afc336a24af2487b4557b8d2b13f981f2d8190983bc196b36a68",
     "https://bcr.bazel.build/modules/rules_foreign_cc/0.9.0/MODULE.bazel": "c9e8c682bf75b0e7c704166d79b599f93b72cfca5ad7477df596947891feeef6",
     "https://bcr.bazel.build/modules/rules_fuzzing/0.5.2/MODULE.bazel": "40c97d1144356f52905566c55811f13b299453a14ac7769dfba2ac38192337a8",
     "https://bcr.bazel.build/modules/rules_fuzzing/0.5.2/source.json": "c8b1e2c717646f1702290959a3302a178fb639d987ab61d548105019f11e527e",
@@ -111,6 +112,8 @@
     "https://bcr.bazel.build/modules/rules_java/7.2.0/MODULE.bazel": "06c0334c9be61e6cef2c8c84a7800cef502063269a5af25ceb100b192453d4ab",
     "https://bcr.bazel.build/modules/rules_java/7.3.2/MODULE.bazel": "50dece891cfdf1741ea230d001aa9c14398062f2b7c066470accace78e412bc2",
     "https://bcr.bazel.build/modules/rules_java/7.6.1/MODULE.bazel": "2f14b7e8a1aa2f67ae92bc69d1ec0fa8d9f827c4e17ff5e5f02e91caa3b2d0fe",
+    "https://bcr.bazel.build/modules/rules_java/8.3.2/MODULE.bazel": "7336d5511ad5af0b8615fdc7477535a2e4e723a357b6713af439fe8cf0195017",
+    "https://bcr.bazel.build/modules/rules_java/8.5.1/MODULE.bazel": "d8a9e38cc5228881f7055a6079f6f7821a073df3744d441978e7a43e20226939",
     "https://bcr.bazel.build/modules/rules_java/8.6.1/MODULE.bazel": "f4808e2ab5b0197f094cabce9f4b006a27766beb6a9975931da07099560ca9c2",
     "https://bcr.bazel.build/modules/rules_java/8.6.1/source.json": "f18d9ad3c4c54945bf422ad584fa6c5ca5b3116ff55a5b1bc77e5c1210be5960",
     "https://bcr.bazel.build/modules/rules_jvm_external/4.4.2/MODULE.bazel": "a56b85e418c83eb1839819f0b515c431010160383306d13ec21959ac412d2fe7",
@@ -143,7 +146,8 @@
     "https://bcr.bazel.build/modules/rules_python/0.31.0/MODULE.bazel": "93a43dc47ee570e6ec9f5779b2e64c1476a6ce921c48cc9a1678a91dd5f8fd58",
     "https://bcr.bazel.build/modules/rules_python/0.4.0/MODULE.bazel": "9208ee05fd48bf09ac60ed269791cf17fb343db56c8226a720fbb1cdf467166c",
     "https://bcr.bazel.build/modules/rules_python/0.40.0/MODULE.bazel": "9d1a3cd88ed7d8e39583d9ffe56ae8a244f67783ae89b60caafc9f5cf318ada7",
-    "https://bcr.bazel.build/modules/rules_python/0.40.0/source.json": "939d4bd2e3110f27bfb360292986bb79fd8dcefb874358ccd6cdaa7bda029320",
+    "https://bcr.bazel.build/modules/rules_python/1.1.0/MODULE.bazel": "57e01abae22956eb96d891572490d20e07d983e0c065de0b2170cafe5053e788",
+    "https://bcr.bazel.build/modules/rules_python/1.1.0/source.json": "29f1fdfd23a40808c622f813bc93e29c3aae277333f03293f667e76159750a0f",
     "https://bcr.bazel.build/modules/rules_shell/0.2.0/MODULE.bazel": "fda8a652ab3c7d8fee214de05e7a9916d8b28082234e8d2c0094505c5268ed3c",
     "https://bcr.bazel.build/modules/rules_shell/0.3.0/MODULE.bazel": "de4402cd12f4cc8fda2354fce179fdb068c0b9ca1ec2d2b17b3e21b24c1a937b",
     "https://bcr.bazel.build/modules/rules_shell/0.3.0/source.json": "c55ed591aa5009401ddf80ded9762ac32c358d2517ee7820be981e2de9756cf3",
@@ -153,7 +157,8 @@
     "https://bcr.bazel.build/modules/stardoc/0.6.2/MODULE.bazel": "7060193196395f5dd668eda046ccbeacebfd98efc77fed418dbe2b82ffaa39fd",
     "https://bcr.bazel.build/modules/stardoc/0.7.0/MODULE.bazel": "05e3d6d30c099b6770e97da986c53bd31844d7f13d41412480ea265ac9e8079c",
     "https://bcr.bazel.build/modules/stardoc/0.7.1/MODULE.bazel": "3548faea4ee5dda5580f9af150e79d0f6aea934fc60c1cc50f4efdd9420759e7",
-    "https://bcr.bazel.build/modules/stardoc/0.7.1/source.json": "b6500ffcd7b48cd72c29bb67bcac781e12701cc0d6d55d266a652583cfcdab01",
+    "https://bcr.bazel.build/modules/stardoc/0.7.2/MODULE.bazel": "fc152419aa2ea0f51c29583fab1e8c99ddefd5b3778421845606ee628629e0e5",
+    "https://bcr.bazel.build/modules/stardoc/0.7.2/source.json": "58b029e5e901d6802967754adf0a9056747e8176f017cfe3607c0851f4d42216",
     "https://bcr.bazel.build/modules/upb/0.0.0-20220923-a547704/MODULE.bazel": "7298990c00040a0e2f121f6c32544bab27d4452f80d9ce51349b1a28f3005c43",
     "https://bcr.bazel.build/modules/zlib/1.2.11/MODULE.bazel": "07b389abc85fdbca459b69e2ec656ae5622873af3f845e1c9d80fe179f3effa0",
     "https://bcr.bazel.build/modules/zlib/1.2.12/MODULE.bazel": "3b1a8834ada2a883674be8cbd36ede1b6ec481477ada359cd2d3ddc562340b27",
@@ -304,8 +309,8 @@
     },
     "@@rules_foreign_cc+//foreign_cc:extensions.bzl%tools": {
       "general": {
-        "bzlTransitiveDigest": "gSYCcLbqaVeGzjJbZ8sbe3m7H3GKhJu9vAWq4fRg1f0=",
-        "usagesDigest": "mqChTKgeSo2+U6Pxt2FXlbg3JnDADJTrRE2okUyeU4g=",
+        "bzlTransitiveDigest": "s250RunLyhfcQbKIaaBuMfP5f663Spl3T3NSHanLTeY=",
+        "usagesDigest": "Eyh4mAOi6L+Nn/lY/wQBJclQrmBnWdQM+B4lZeq6azA=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -360,7 +365,7 @@
                 "https://github.com/Kitware/CMake/releases/download/v3.23.2/cmake-3.23.2.tar.gz"
               ],
               "patches": [
-                "@@rules_foreign_cc+//toolchains:cmake-c++11.patch"
+                "@@rules_foreign_cc+//toolchains/patches:cmake-c++11.patch"
               ]
             }
           },
@@ -391,7 +396,7 @@
           "meson_src": {
             "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
             "attributes": {
-              "build_file_content": "exports_files([\"meson.py\"])\n\nfilegroup(\n    name = \"runtime\",\n    srcs = glob([\"mesonbuild/**\"]),\n    visibility = [\"//visibility:public\"],\n)\n",
+              "build_file_content": "exports_files([\"meson.py\"])\n\nfilegroup(\n    name = \"runtime\",\n    # NOTE: excluding __pycache__ is important to avoid rebuilding due to pyc\n    # files, see https://github.com/bazel-contrib/rules_foreign_cc/issues/1342\n    srcs = glob([\"mesonbuild/**\"], exclude = [\"**/__pycache__/*\"]),\n    visibility = [\"//visibility:public\"],\n)\n",
               "sha256": "567e533adf255de73a2de35049b99923caf872a455af9ce03e01077e0d384bed",
               "strip_prefix": "meson-1.5.1",
               "urls": [
@@ -452,9 +457,9 @@
               "sha256": "6fc69c01688c9458a57eb9a1664c9aba372ccda420a02bf4429fe610e7e7d591",
               "strip_prefix": "pkg-config-0.29.2",
               "patches": [
-                "@@rules_foreign_cc+//toolchains:pkgconfig-detectenv.patch",
-                "@@rules_foreign_cc+//toolchains:pkgconfig-makefile-vc.patch",
-                "@@rules_foreign_cc+//toolchains:pkgconfig-builtin-glib-int-conversion.patch"
+                "@@rules_foreign_cc+//toolchains/patches:pkgconfig-detectenv.patch",
+                "@@rules_foreign_cc+//toolchains/patches:pkgconfig-makefile-vc.patch",
+                "@@rules_foreign_cc+//toolchains/patches:pkgconfig-builtin-glib-int-conversion.patch"
               ],
               "urls": [
                 "https://pkgconfig.freedesktop.org/releases/pkg-config-0.29.2.tar.gz",
@@ -473,19 +478,29 @@
           "bazel_skylib": {
             "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
             "attributes": {
+              "sha256": "bc283cdfcd526a52c3201279cda4bc298652efa898b10b4db0837dc51652756f",
               "urls": [
-                "https://mirror.bazel.build/github.com/bazelbuild/bazel-skylib/releases/download/1.2.1/bazel-skylib-1.2.1.tar.gz",
-                "https://github.com/bazelbuild/bazel-skylib/releases/download/1.2.1/bazel-skylib-1.2.1.tar.gz"
+                "https://mirror.bazel.build/github.com/bazelbuild/bazel-skylib/releases/download/1.7.1/bazel-skylib-1.7.1.tar.gz",
+                "https://github.com/bazelbuild/bazel-skylib/releases/download/1.7.1/bazel-skylib-1.7.1.tar.gz"
+              ]
+            }
+          },
+          "rules_cc": {
+            "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
+            "attributes": {
+              "urls": [
+                "https://github.com/bazelbuild/rules_cc/releases/download/0.0.17/rules_cc-0.0.17.tar.gz"
               ],
-              "sha256": "f7be3474d42aae265405a592bb7da8e171919d74c16f082a5457840f06054728"
+              "sha256": "abc605dd850f813bb37004b77db20106a19311a96b2da1c92b789da529d28fe1",
+              "strip_prefix": "rules_cc-0.0.17"
             }
           },
           "rules_python": {
             "repoRuleId": "@@bazel_tools//tools/build_defs/repo:http.bzl%http_archive",
             "attributes": {
-              "sha256": "84aec9e21cc56fbc7f1335035a71c850d1b9b5cc6ff497306f84cced9a769841",
-              "strip_prefix": "rules_python-0.23.1",
-              "url": "https://github.com/bazelbuild/rules_python/archive/refs/tags/0.23.1.tar.gz"
+              "sha256": "0a158f883fc494724f25e2ce6a5c3d31fd52163a92d4b7180aef0ff9a0622f70",
+              "strip_prefix": "rules_python-1.1.0-rc0",
+              "url": "https://github.com/bazelbuild/rules_python/releases/download/1.1.0-rc0/rules_python-1.1.0-rc0.tar.gz"
             }
           },
           "rules_shell": {
