@@ -1,4 +1,4 @@
-// Copyright 2025 Philipp Stephani
+// Copyright 2025, 2026 Philipp Stephani
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -16,10 +16,9 @@ module github.com/phst/gmp
 
 go 1.21
 
-require github.com/google/addlicense v1.1.1
-
 require (
 	github.com/bmatcuk/doublestar/v4 v4.0.2 // indirect
+	github.com/google/addlicense v1.1.1 // indirect
 	golang.org/x/sync v0.0.0-20190911185100-cd5d95a43a6e // indirect
 )
 
