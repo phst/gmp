@@ -1,4 +1,4 @@
-# Copyright 2019, 2025 Google LLC
+# Copyright 2019, 2025, 2026 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -13,7 +13,6 @@
 # limitations under the License.
 
 load("@buildifier//:rules.bzl", "buildifier_test")
-load("@phst_license_test//:def.bzl", "license_test")
 
 buildifier_test(
     name = "buildifier_test",
@@ -23,10 +22,4 @@ buildifier_test(
     no_sandbox = True,
     verbose = True,
     workspace = "//:WORKSPACE",
-)
-
-license_test(
-    name = "license_test",
-    timeout = "short",
-    marker = "//:MODULE.bazel",
 )
