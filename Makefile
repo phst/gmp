@@ -20,11 +20,12 @@ SHELL = /bin/sh
 
 BAZEL = bazel
 BAZELFLAGS =
-ADDLICENSE = $(BAZEL) run $(BAZELFLAGS) -- @addlicense
+GO = $(BAZEL) run $(BAZELFLAGS) -- @rules_go//go
+ADDLICENSE = $(GO) tool addlicense
 
 all:
 	$(BAZEL) build $(BAZELFLAGS) -- //...
 
 check: all
 	$(BAZEL) test $(BAZELFLAGS) -- //...
-	$(ADDLICENSE) -check -- "$${PWD}"
+	$(ADDLICENSE) -check -- .
