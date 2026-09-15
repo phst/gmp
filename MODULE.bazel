@@ -26,7 +26,7 @@ gmp_repo(
 
 bazel_dep(
     name = "buildifier_prebuilt",
-    version = "8.5.1.4",
+    version = "10.0.1",
     dev_dependency = True,
     repo_name = "buildifier",
 )
