@@ -14,7 +14,7 @@
 
 module github.com/phst/gmp
 
-go 1.21
+go 1.26.7
 
 require (
 	github.com/bmatcuk/doublestar/v4 v4.0.2 // indirect
