@@ -49,3 +49,5 @@ jobs:
         shell: bash
         run: |
           make check BAZEL=bazelisk
+        env:
+          CC: gcc-14
