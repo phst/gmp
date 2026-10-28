@@ -1,4 +1,4 @@
-# Copyright 2019, 2025 Google LLC
+# Copyright 2019, 2025, 2026 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -27,6 +27,8 @@ configure_make(
         "[linux]": [
             # https://github.com/bazelbuild/rules_foreign_cc/issues/296
             "CXX=c++",
+            # https://gmplib.org/list-archives/gmp-bugs/2024-November/005550.html
+            "CFLAGS=-std=c11",
         ],
         "[macos]": [
             # https://github.com/bazelbuild/rules_foreign_cc/issues/296
